@@ -29,25 +29,26 @@ def on_release(key):
         match = matches(text, json['dictionaty'])
         if match:
             print(f"Detectamos que quisieron poner: {text}")
-            windows.blocked()
-            cam = cv2.VideoCapture(0)
-            camera = Camara(camera=cam, cv2=cv2)
-            camera.capture("coffes")
-            camera.close()
-        # Stop listener
-        return False
+            # windows.blocked()
+            # cam = cv2.VideoCapture(0)
+            # camera = Camara(camera=cam, cv2=cv2)
+            # camera.capture("coffes")
+            # camera.close()
+            # Stop listener
+            return False
     if key == keyboard.Key.space:
         text = data.read_txt('dictionary/frases.txt')
         json = data.read_json('dictionary/dictionary.json')
         match = matches(text, json['dictionaty'])
+        print(f"MATCH: {match}")
         if match:
             print(f"Detectamos que quisieron poner: {text}")
-            windows.blocked()
-            cam = cv2.VideoCapture(0)
-            camera = Camara(camera=cam, cv2=cv2)
-            camera.capture("coffes")
-            camera.close()
-        return False
+            # windows.blocked()
+            # cam = cv2.VideoCapture(0)
+            # camera = Camara(camera=cam, cv2=cv2)
+            # camera.capture("coffes")
+            # camera.close()
+            return False
 
     if key == keyboard.Key.esc:
         data.wire_txt("dictionary/frases.txt", 'w', "")
