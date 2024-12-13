@@ -52,14 +52,14 @@ def on_release(key):
 
 if __name__ == '__main__':
     # Collect events until released
-    print(f"""
-      AAAAA  N   N TTTTT III  CCCCC OOO  FFFFF FFFFF EEEEE SSSSS
-      A   A  NN  N   T    I   C     O   O F     F     E     S
-      AAAAA  N N N   T    I   C     O   O FFFF  FFFF  EEEE  SSSS
-      A   A  N  NN   T    I   C     O   O F     F     E         S
-      A   A  N   N   T   III  CCCCC OOO  F     F     EEEEE SSSSS
+    print("""
+      AAAAA   N   N  TTTTT   III   CCCCC   OOO   FFFFF  FFFFF   EEEEE   SSSSS
+      A   A   NN  N    T     I    C       O   O  F      F      E       S
+      AAAAA   N N N    T     I    C       O   O  FFFF   FFFF   EEEE    SSSS
+      A   A   N  NN    T     I    C       O   O  F      F      E           S
+      A   A   N   N    T    III   CCCCCC   OOO   F      F      EEEEE   SSSSS
 
-                            by Mike :)                      
+                                by Mike
     """)
     print("Ejecutandose............................")
     with keyboard.Listener(
