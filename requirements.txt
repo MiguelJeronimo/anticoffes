@@ -1,0 +1,14 @@
+opencv-python~=4.10.0.84
+numpy~=1.21.6
+pip~=19.2.3
+attrs~=22.1.0
+PySocks~=1.7.1
+docutils~=0.19
+filelock~=3.8.0
+charset-normalizer~=2.0.12
+setuptools~=41.2.0
+pytz~=2023.3
+cffi~=1.15.1
+six~=1.16.0
+pynput~=1.7.7
+Jinja2~=3.1.2
