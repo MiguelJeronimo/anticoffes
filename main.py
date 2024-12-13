@@ -1,4 +1,5 @@
 import cv2
+from colorama import init, Fore, Back, Style
 from pynput import keyboard
 from pynput.keyboard import KeyCode
 from camara.Camara import Camara
@@ -6,6 +7,8 @@ from utils.Data import Data
 from utils.Windows import Windows
 from utils.matches import matches
 
+
+init(autoreset=True)
 data = Data()
 windows = Windows()
 def on_press(key:KeyCode):
@@ -44,6 +47,7 @@ def on_release(key):
             camera = Camara(camera=cam, cv2=cv2)
             camera.capture("coffes")
             camera.close()
+        return False
 
     if key == keyboard.Key.esc:
         data.wire_txt("dictionary/frases.txt", 'w', "")
@@ -52,16 +56,16 @@ def on_release(key):
 
 if __name__ == '__main__':
     # Collect events until released
-    print("""
+    print(Fore.RED + """
       AAAAA   N   N  TTTTT   III   CCCCC   OOO   FFFFF  FFFFF   EEEEE   SSSSS
       A   A   NN  N    T     I    C       O   O  F      F      E       S
       AAAAA   N N N    T     I    C       O   O  FFFF   FFFF   EEEE    SSSS
       A   A   N  NN    T     I    C       O   O  F      F      E           S
-      A   A   N   N    T    III   CCCCCC   OOO   F      F      EEEEE   SSSSS
-
-                                by Mike
+      A   A   N   N    T    III   CCCCC   OOO   F      F      EEEEE   SSSSS
     """)
-    print("Ejecutandose............................")
+
+    # Estilo normal con texto blanco y fondo azul
+    print(Fore.GREEN+  "                            by Mike")
     with keyboard.Listener(
             on_press=on_press,
             on_release=on_release) as listener:

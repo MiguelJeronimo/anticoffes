@@ -19,3 +19,4 @@ pefile~=2024.8.26
 py~=1.11.0
 pywin32-ctypes~=0.2.3
 pyinstaller-hooks-contrib~=2024.7
+colorama~=0.4.6
