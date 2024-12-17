@@ -3,5 +3,4 @@ def matches(data, dictionary:list):
         if element in data:
             print(f"Element: {element}; data: {data}")
             return True
-        else:
-            return False
+    return False
